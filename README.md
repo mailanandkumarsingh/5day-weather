@@ -7,8 +7,9 @@ This app has been developed using :
 * [axios]Promises to make aysncronous network calls.
 * parse JSON data and generate model object from the data.
 * use [redux-promise](https://github.com/acdlite/redux-promise) middleware for handling promises.
-* use the [OpenWeatherMap](http://openweathermap.org) API to get weather forecast for 5 days.
-* use google maps API to display the maps based on long/lat returned by OpenWeatherMap
+* [OpenWeatherMap](http://openweathermap.org) API to get weather forecast for 5 days.
+* google maps API to display the maps based on long/lat returned by OpenWeatherMap
+* react-d3 for plotting graphs
 
 ###Getting Started###
 
