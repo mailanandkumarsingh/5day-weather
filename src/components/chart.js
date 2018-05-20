@@ -2,11 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { BarChart } from 'react-d3';
 
-function average(data) {
-  return _.round(_.sum(data)/data.length);
-}
-
-function barDataNeeded(data) {
+const barDataNeeded = (data) => {
   console.log('What is the data ', data);
   return [
     { 
@@ -25,12 +21,6 @@ function barDataNeeded(data) {
 
 export default (props) => {
   const barData = barDataNeeded(props.data);
-  const viewobj = {
-    x: 0,
-    y: 0,
-    width: 500,
-    height: 400
-  };
 
   return (
     <div>
