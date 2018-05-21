@@ -7,10 +7,17 @@
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "prod": "NODE_ENV=production node server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch",
+    "test": "jest",
+    "test:dev": "jest --watch",
+    "test:coverage": "jest --coverage",
     "postinstall": "webpack -p",
     "start": "node server.js"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      ".js": "./node_modules/babel-jest"
+    }
   },
   "author": "Anand Singh",
   "license": "ISC",
@@ -21,6 +28,8 @@
     "babel-preset-react": "^6.1.18",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "jquery": "^2.2.1",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
@@ -30,15 +39,19 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "babel-jest": "^22.4.4",
     "babel-preset-stage-1": "^6.1.18",
+    "jest": "^22.4.4",
     "lodash": "^3.10.1",
-    "react": "^0.14.3",
+    "react": "^15.4.2",
     "react-d3": "^0.4.0",
-    "react-dom": "^0.14.3",
+    "react-dom": "^15.4.2",
     "react-google-maps": "^4.7.1",
     "react-redux": "^4.0.0",
     "react-router": "^2.0.1",
+    "react-test-renderer": "^15.5.4",
     "redux": "^3.0.4",
+    "redux-mock-store": "^1.5.1",
     "redux-promise": "^0.5.3"
   }
 }
