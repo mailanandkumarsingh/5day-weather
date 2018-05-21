@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators} from 'redux';
-import { fetchWeather } from '../actions/index';
+import { fetchWeather } from '../../actions/index';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -30,7 +30,6 @@ class SearchBar extends Component {
         <input
           placeholder="Get a five-day forecast in your favorite cities"
           className="form-control"
-          id="city"
           value={ this.state.term }
           onChange={ this.onInputChange }
         />
@@ -42,9 +41,4 @@ class SearchBar extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchWeather }, dispatch);
-}
-
-// export default SearchBar;
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default SearchBar;

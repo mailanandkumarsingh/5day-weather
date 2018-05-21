@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Chart from '../components/chart';
-import GoogleMap from '../components/google_map';
+import Chart from '../../components/chart';
+import GoogleMap from '../../components/google_map';
 
 class WeatherList extends Component {
   renderWeather(cityData) {
@@ -22,7 +22,7 @@ class WeatherList extends Component {
 
   render() {
     return (
-      <table className="table table-hover">
+      <table className="table table-hover" id="mapTable">
         <thead>
           <tr>
             <th>City</th>
@@ -37,9 +37,4 @@ class WeatherList extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  // const weather = state.weather;
-  return {weather: state.weather}; // { weather } === { weather: weather }
-}
-
-export default connect(mapStateToProps)(WeatherList)
+export default WeatherList;

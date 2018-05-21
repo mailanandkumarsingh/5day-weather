@@ -16,4 +16,5 @@ describe('Action Test', () => {
 		};
 		expect(weatherList.fetchWeather(city)).toEqual(expectedAction)
 	});
+
 });

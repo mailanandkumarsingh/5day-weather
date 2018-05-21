@@ -10,6 +10,7 @@ This app has been developed using :
 * [OpenWeatherMap](http://openweathermap.org) API to get weather forecast for 5 days.
 * google maps API to display the maps based on long/lat returned by OpenWeatherMap
 * react-d3 for plotting graphs
+* JEST framework for snapshot and unittestcases
 
 ###Getting Started###
 
@@ -21,4 +22,6 @@ Checkout this repo, install dependencies, then start webpack server with the fol
 	> npm install
 	> npm run dev
 	> open browser - localhost:8080
+	> npm run test(for unittestcases)
+	> npm run test:coverage(for coverage)
 ```
