@@ -20,4 +20,5 @@ Checkout this repo, install dependencies, then start webpack server with the fol
 	> cd react-redux-weather-app
 	> npm install
 	> npm run dev
+	> open browser - localhost:8080
 ```
